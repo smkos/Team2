@@ -1,14 +1,11 @@
 import pytest
 
 class Calc:
+    def __init__(self):
+        pass
 
     def getZegop(a):
         return a * a
-
-
-def test_calc():
-    def __init__(self):
-        pass
     
     def getMinus(self, a: float, b: float):
         return a - b
@@ -46,3 +43,13 @@ def test_getGop(a, b, expected):
     cal = Calc()
     assert cal.getGop(a, b) == expected
 
+
+def test_division():
+    calc = Calc()
+    ret = calc.getDivide(4, 2)
+    assert ret == 2
+
+def test_sumsum():
+    calc = Calc()
+    ret = calc.getSumSum(4, 2, 3)
+    assert ret == 9
