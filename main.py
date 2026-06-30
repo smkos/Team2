@@ -1,8 +1,11 @@
 import pytest
 
 class Calc:
-    pass
+    def getZegop(a):
+        return a * a
+
 
 def test_sample():
-    assert 1 == 1
+    zegop_result = Calc().getZegop(3)
+    assert zegop_result == 9
     pytest.fail()
