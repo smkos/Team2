@@ -5,7 +5,7 @@ class Calc:
         return a * a
 
 
-def test_sample():
-    zegop_result = Calc().getZegop(3)
-    assert zegop_result == 9
-    pytest.fail()
+def test_zegop():
+    calc = Calc()
+    ret = calc.getZegop(3)
+    assert ret == 9
