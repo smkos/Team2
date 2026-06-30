@@ -1,8 +1,10 @@
 import pytest
 
 class Calc:
-    pass
+    def getGop(self, a: float, b: float) -> float:
+        return a * b
 
-def test_sample():
-    assert 1 == 1
-    pytest.fail()
+@pytest.mark.parametrize('a,b,expected', [(1,2,2), (2,3,6)])
+def test_getGop(a, b, expected):
+    cal = Calc()
+    assert cal.getGop(a, b) == expected
