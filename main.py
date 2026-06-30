@@ -1,8 +1,9 @@
 import pytest
 
 class Calc:
-    pass
+    def getMinus(a: float, b: float):
+        return a - b
 
 def test_sample():
-    assert 1 == 1
-    pytest.fail()
+    ret = Calc.getMinus(1, 2)
+    assert ret == -1
