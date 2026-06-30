@@ -15,7 +15,10 @@ class Calc:
 
     def getSum(self, a, b):
         return a + b
-
+      
+    def getGop(self, a: float, b: float) -> float:
+        return a * b
+      
 def test_getSum():
     calc = Calc()
     ret = calc.getSum(1, 2)
@@ -25,3 +28,9 @@ def test_minus():
     calc = Calc()
     ret = calc.getMinus(1, 2)
     assert ret == -1
+
+    
+@pytest.mark.parametrize('a,b,expected', [(1,2,2), (2,3,6)])
+def test_getGop(a, b, expected):
+    cal = Calc()
+    assert cal.getGop(a, b) == expected
